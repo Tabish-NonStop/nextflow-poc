@@ -78,6 +78,6 @@ nextflow run main.nf
 
 ## Expected outputs
 Expected outputs in results/:  
-\t qc_report.html → FastQC report.  
-\t aligned.bam → aligned reads.  
-\t variants.vcf → called variants.  
+    qc_report.html → FastQC report.  
+    aligned.bam → aligned reads.  
+    variants.vcf → called variants.  
