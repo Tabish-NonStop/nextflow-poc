@@ -67,3 +67,17 @@ sudo apt install -y fastqc bwa samtools bcftools
 ```
 
 - Step 2: Index the hoax chromosome file (reference.fa)
+```
+bwa index data/reference.fa
+```
+
+- Step 3: Run the pipeline
+```
+nextflow run main.nf
+```
+
+## Expected outputs
+Expected outputs in results/:  
+\t qc_report.html → FastQC report.  
+\t aligned.bam → aligned reads.  
+\t variants.vcf → called variants.  
