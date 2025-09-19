@@ -27,8 +27,43 @@ In super simple words:
 
 
 # How to run this project?
+### This PoC requires [Linux](https://www.linux.org/) ([wsl](https://ubuntu.com/desktop/wsl) has been used)
 
-- 1. Install Nextflow (Linux is preferred)
+### Set-Up
+- Step 1. Install Java
+1. Install Java (version >= 17)
+```
+sdk install java 17.0.10-tem
+```
+2. Confirm installation
+```
+java -version
+```
+
+- Step 2: [Install Nextflow](https://www.nextflow.io/docs/latest/install.html)
+1. Download Nextflow
 ```
 curl -s https://get.sdkman.io | bash
 ```
+2. Make Nextflow executable
+```
+chmod +x nextflow
+```
+3. Move Nextflow into an executable path. For example:
+```
+mkdir -p $HOME/.local/bin/
+mv nextflow $HOME/.local/bin/
+```
+4. Confirm Nextflow is installed correctly
+```
+nextflow info
+```
+
+### Running the project
+- Step 1: Install the required dependencies/libraries/tools
+```
+sudo apt update
+sudo apt install -y fastqc bwa samtools bcftools
+```
+
+- Step 2: Index the hoax chromosome file (reference.fa)
